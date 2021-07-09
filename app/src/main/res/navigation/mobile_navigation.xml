@@ -13,11 +13,14 @@
 
         <action
             android:id="@+id/action_nav_home_to_addToDoFragment"
-            app:destination="@id/addToDoFragment" />
+            app:destination="@id/addToDoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <argument
             android:name="todoId"
             app:argType="long" />
-
 
     </fragment>
 
@@ -30,7 +33,11 @@
             android:id="@+id/action_nav_gallery_to_editSecondFragment"
             app:destination="@id/editSecondFragment"
             app:popUpTo="@id/editSecondFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
         <argument
             android:name="requestImg"
             app:argType="integer" />
@@ -61,7 +68,11 @@
 
         <action
             android:id="@+id/action_nav_settings_to_editFragment"
-            app:destination="@id/editFragment" />
+            app:destination="@id/editFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <argument
             android:name="firstname"
             app:argType="string" />
@@ -82,7 +93,11 @@
             android:id="@+id/action_addToDoFragment_to_nav_home2"
             app:destination="@id/nav_home"
             app:popUpTo="@id/addToDoFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <argument
             android:name="todoId"
             app:argType="long" />
@@ -90,7 +105,7 @@
     <fragment
         android:id="@+id/editFragment"
         android:name="com.example.navigationfragments.ui.settings.EditFragment"
-        android:label="fragment_edit"
+        android:label="Edit Profile"
         tools:layout="@layout/fragment_edit">
         <argument
             android:name="firstname"
@@ -100,21 +115,33 @@
             app:argType="string" />
         <action
             android:id="@+id/action_editFragment_to_editSecondFragment"
-            app:destination="@id/editSecondFragment" />
+            app:destination="@id/editSecondFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/editSecondFragment"
         android:name="com.example.navigationfragments.ui.settings.EditSecondFragment"
-        android:label="fragment_edit_second"
+        android:label="Set Image"
         tools:layout="@layout/fragment_edit_second">
         <action
             android:id="@+id/action_editSecondFragment_to_nav_gallery"
-            app:destination="@id/nav_gallery" />
+            app:destination="@id/nav_gallery"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <action
             android:id="@+id/action_editSecondFragment_to_nav_settings"
             app:destination="@id/nav_settings"
             app:popUpTo="@id/nav_settings"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
 
         <argument
             android:name="firstname"

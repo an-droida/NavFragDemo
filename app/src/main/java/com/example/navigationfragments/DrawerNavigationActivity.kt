@@ -10,7 +10,7 @@ import androidx.core.view.GravityCompat
 import androidx.navigation.ui.*
 import com.example.navigationfragments.databinding.ActivityDrawerNavigationBinding
 
-class DrawerNavigationActivity : AppCompatActivity() {
+class  DrawerNavigationActivity : AppCompatActivity() {
 
     lateinit var appBarConfiguration: AppBarConfiguration
     lateinit var binding: ActivityDrawerNavigationBinding
