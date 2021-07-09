@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp"
-    tools:context=".ui.settings.SettingsFragment">
+    tools:context=".ui.settings.EditSecondFragment">
 
 
     <ImageView
-        android:id="@+id/profileImg"
         android:layout_width="200dp"
+        android:id="@+id/profileImageView"
         android:layout_height="200dp"
         android:src="@drawable/ic_menu_camera" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Add Image" />
 
     <TextView
         android:id="@+id/firstnameTV"
@@ -33,10 +38,10 @@
         android:textSize="20sp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/editBtn"
+        android:id="@+id/doneBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Edit" />
+        android:layout_marginTop="40dp"
+        android:text="Done" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
