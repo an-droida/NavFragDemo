@@ -17,33 +17,12 @@ import com.example.navigationfragments.ui.settings.SettingsFragment.Companion.LA
 class EditFragment : Fragment() {
 
     lateinit var binding: FragmentEditBinding
-    var image:Int?=null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-//        arguments.let {
-//            if (it != null ) {
-//                image = (it.getInt(EditSecondFragment.IMAGE_RESULT))
-//            }
-//        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentEditBinding.inflate(inflater, container, false)
-
-//        val viewModelFactory = ViewModelFactory(ToDoRepository(db.dao()))
-//        viewModel = ViewModelProvider(this, viewModelFactory).get(SettingsViewModel::class.java)
-
-//        viewModel.firstname.observe(viewLifecycleOwner, {
-//            binding.firstname.setText(it)
-//        })
-//
-//        viewModel.lastname.observe(viewLifecycleOwner, {
-//            binding.lastname.setText(it)
-//        })
 
         arguments.let {
             if (it != null) {
@@ -54,8 +33,6 @@ class EditFragment : Fragment() {
 
 
         binding.nextBtn.setOnClickListener {
-//            viewModel.firstname.postValue(binding.firstname.text.toString())
-//            viewModel.lastname.postValue(binding.lastname.text.toString())
             requireView().findNavController().navigate(
                 EditFragmentDirections.actionEditFragmentToEditSecondFragment(
                     binding.firstname.text.toString(),

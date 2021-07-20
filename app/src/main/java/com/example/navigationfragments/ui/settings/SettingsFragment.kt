@@ -41,19 +41,6 @@ class SettingsFragment : Fragment() {
         val viewModelFactory = ViewModelFactory(ToDoRepository(db.dao()))
         viewModel = ViewModelProvider(this, viewModelFactory).get(SettingsViewModel::class.java)
 
-//        viewModel.firstname.observe(viewLifecycleOwner, {
-//            binding.firstnameTV.text = it
-//        })
-//
-//        viewModel.lastname.observe(viewLifecycleOwner, {
-//            binding.lastnameTV.text = it
-//        })
-
-//        viewModel.profileImage.observe(viewLifecycleOwner, {
-//            binding.profileImg.setImageResource(it)
-//        })
-
-
         arguments.let {
             if (it?.getString(FIRSTNAME) != null) {
                 binding.firstnameTV.text = it.getString(FIRSTNAME)

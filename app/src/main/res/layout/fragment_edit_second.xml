@@ -9,17 +9,22 @@
 
 
     <ImageView
-        android:layout_width="200dp"
         android:id="@+id/profileImageView"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_menu_camera" />
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img2" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/addImgBtn"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#46D17B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Add Image" />
+        android:textColor="@color/white"
+        android:text="Add Image"/>
 
     <TextView
         android:id="@+id/firstnameTV"
@@ -27,21 +32,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="firstname"
+        android:text="Firstname"
+        android:textColor="@color/black"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/lastnameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lastname"
+        android:textColor="@color/black"
+        android:text="Lastname"
         android:textSize="20sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/doneBtn"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#46B5D1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Done" />
+        android:textColor="@color/white"
+        android:text="done"/>
 
 </LinearLayout>

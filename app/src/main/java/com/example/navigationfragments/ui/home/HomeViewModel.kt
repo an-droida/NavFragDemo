@@ -11,8 +11,7 @@ import kotlinx.coroutines.launch
 
 
 class HomeViewModel (
-    val repository: ToDoRepository
-) : ViewModel(){
+    val repository: ToDoRepository) : ViewModel(){
 
     val isFavoriteCall: MutableLiveData<Boolean> = MutableLiveData()
 
@@ -40,5 +39,6 @@ class HomeViewModel (
             repository.setFavorite(todoId, isFavorite)
         }
     }
+
 
 }

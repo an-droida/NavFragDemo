@@ -11,7 +11,8 @@ import com.example.navigationfragments.ui.data.ToDoModel
 
 class RecyclerViewAdapter(
     private val todos: MutableList<ToDoModel>,
-    private val favoriteCallback: FavoriteCallback
+//    private val favoriteCallback: FavoriteCallback,
+    val adapterOnClick : (Int,Boolean) -> Unit
 ) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
@@ -51,11 +52,13 @@ class RecyclerViewAdapter(
                 if (model.isFavorite == true) {
                     model.isFavorite = false
                     binding.setFavoriteBtn.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-                    favoriteCallback.setFavorite(adapterPosition, false)
+//                    favoriteCallback.setFavorite(adapterPosition, false)
+                    adapterOnClick(adapterPosition,false)
                 } else {
                     model.isFavorite = true
                     binding.setFavoriteBtn.setImageResource(R.drawable.ic_baseline_favorite_24)
-                    favoriteCallback.setFavorite(adapterPosition, true)
+//                    favoriteCallback.setFavorite(adapterPosition, true)
+                    adapterOnClick(adapterPosition,true)
                 }
             }
 
